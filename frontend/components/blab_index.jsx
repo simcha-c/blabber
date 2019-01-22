@@ -23,7 +23,7 @@ class BlabsIndex extends Component {
     return (
       <main className="blab-index">
         <h3>Blabber</h3>
-        <img src={window.blabbersURL} />
+        
         <ul className="blab-list">
           {blabLis}
         </ul>
