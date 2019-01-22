@@ -1,0 +1,15 @@
+<form class="session-form" action="<%= session_url %>" method="POST">
+  <h1>Log In</h1>
+  <img src="<%= image_url "blab-logo.jpg" %>"/>
+  
+  <%= auth_token %>
+  <label for="username">Username:
+    <input id="username" type="text" name="user[username]" value="">
+  </label>
+  
+  <label for="password">Password:
+    <input id="password" type="password" name="user[password]" value="">
+  </label>
+
+  <input type="submit" value="Log In">
+</form>

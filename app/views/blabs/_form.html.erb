@@ -1,0 +1,16 @@
+<% if edit %>
+    <% action = blab_url(blab) %>
+<% else %>
+    <% action = blabs_url %>
+<% end %>
+
+
+<form action="<%= action %>" method="POST">
+<%= auth_token %>
+<% if edit %>
+    <input type="hidden" name="_method" value="PATCH">
+<% end%>
+    <label for="blab-body">Body</label>
+    <input id="blab-body" type="text" name="blab[body]" value="<%= blab.body %>">
+    <input type="submit" value="<%= edit ? "Edit the Blab" : "Blab the blab" %>">
+</form>

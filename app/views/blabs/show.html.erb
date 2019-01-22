@@ -1,0 +1,14 @@
+<h1>One single blab</h1>
+<div>
+    <p><%= @blab.body %></p>
+    <br/>
+    <p><%= "This blab was authored by: #{@blab.author.username}" %></p>
+    <p><%= "This blab was written in : #{@blab.location.name}" %></p>
+</div>
+
+<a href="<%= edit_blab_url(@blab) %>"><h3>Edit the blab</h3></a>
+
+<form action="<%= blab_url(@blab) %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Deblab the blab">
+</form>

@@ -1,0 +1,12 @@
+<h1>All the blabs!</h1>
+
+<ul>
+    <% @blabs.each do |blab| %>
+        <li>
+            <%= blab.author.username %> : <%= blab.body %> <a href="<%= blab_url(blab) %>">Blab!</a>
+        </li>
+    <% end %>
+</ul>
+<a href="<%= new_blab_url %>"><h1>Create a BLAB!!!</h1></a>
+
+<!-- -->
